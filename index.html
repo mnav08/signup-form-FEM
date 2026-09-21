@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  </head>
+  <body>
+    <main class="page">
+      <div class="card" id="card">
+        <!-- Sign-up form start -->
+        <section class="signup" id="signup-section" aria-labelledby="signup-heading">
+          <picture class="signup__illustration">
+            <source
+              media="(min-width: 60rem)"
+              srcset="./assets/images/illustration-sign-up-desktop.svg"
+            />
+            <source
+              media="(min-width: 48rem)"
+              srcset="./assets/images/illustration-sign-up-tablet.svg"
+            />
+            <img
+              class="signup__illustration-img"
+              src="./assets/images/illustration-sign-up-mobile.svg"
+              alt=""
+            />
+          </picture>
+
+          <div class="signup__content">
+            <h1 class="signup__heading" id="signup-heading">Stay updated!</h1>
+
+            <p class="signup__description">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+
+            <ul class="signup__benefits">
+              <li class="signup__benefit">
+                <img
+                  class="signup__benefit-icon"
+                  src="./assets/images/icon-list.svg"
+                  alt=""
+                />
+                <span>Product discovery and building what matters</span>
+              </li>
+              <li class="signup__benefit">
+                <img
+                  class="signup__benefit-icon"
+                  src="./assets/images/icon-list.svg"
+                  alt=""
+                />
+                <span>Measuring to ensure updates are a success</span>
+              </li>
+              <li class="signup__benefit">
+                <img
+                  class="signup__benefit-icon"
+                  src="./assets/images/icon-list.svg"
+                  alt=""
+                />
+                <span>And much more!</span>
+              </li>
+            </ul>
+
+            <form class="signup__form" id="signup-form" novalidate>
+              <div class="form-field">
+                <div class="form-field__header">
+                  <label class="form-field__label" for="email">Email address</label>
+                  <span class="form-field__error" id="email-error" role="alert" hidden
+                    >Valid email required</span
+                  >
+                </div>
+                <input
+                  class="form-field__input"
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="email@company.com"
+                  autocomplete="email"
+                  required
+                  aria-describedby="email-error"
+                  aria-invalid="false"
+                />
+              </div>
+
+              <button class="btn" type="submit" id="subscribe-button">
+                Subscribe to monthly newsletter
+              </button>
+            </form>
+          </div>
+        </section>
+        <!-- Sign-up form end -->
+
+        <!-- Success message start -->
+        <section
+          class="success"
+          id="success-section"
+          aria-labelledby="success-heading"
+          hidden
+        >
+          <img
+            class="success__icon"
+            src="./assets/images/icon-success.svg"
+            alt=""
+            width="64"
+            height="64"
+          />
+
+          <h1 class="success__heading" id="success-heading">Thanks for subscribing!</h1>
+
+          <p class="success__description">
+            A confirmation email has been sent to
+            <strong class="success__email" id="success-email">email@company.com</strong>.
+            Please open it and click the button inside to confirm your subscription.
+          </p>
+
+          <button class="btn" type="button" id="dismiss-button">Dismiss message</button>
+        </section>
+        <!-- Success message end -->
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. Coded by
+      <a href="#">Your Name Here</a>.
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
