@@ -44,6 +44,7 @@ dismissBtn.addEventListener("click", () => {
   successSection.hidden = true;
   signupSection.hidden = false;
   emailInput.value = ""; //Clear the input value.
+
   //Hide the error and mark the input as valid again.
   emailErrorMessage.hidden = true;
   emailInput.setAttribute("aria-invalid", "false");
