@@ -16,7 +16,6 @@ form.addEventListener("submit", (e) => {
 
   //checks email is not falsy
   if (!cleanedEmail) {
-    console.log("email required");
     emailErrorMessage.hidden = false;
     emailInput.ariaInvalid = true;
     return;
@@ -27,7 +26,6 @@ form.addEventListener("submit", (e) => {
 
   //checks email contains characters before and after the @ symbol
   if (!isValidEmail.test(cleanedEmail)) {
-    console.log("valid email required");
     emailErrorMessage.hidden = false;
     emailInput.ariaInvalid = true;
     return;

@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub Repo](https://github.com/mnav08/signup-form-FEM.git)
-- Live Site URL: [Live Demo](https://your-live-site-url.com)
+- Live Site URL: [Live Demo](https://mnav08.github.io/signup-form-FEM/)
 
 ## My process
 
@@ -48,28 +48,36 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+I learned how to store and work with data from an input form. I did validation for the email showing error messages for empty field and invalid email pattern
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+//checks email is not falsy
+if (!cleanedEmail) {
+  console.log("email required");
+  emailErrorMessage.hidden = false;
+  emailInput.ariaInvalid = true;
+  return;
+} else {
+  emailErrorMessage.hidden = true;
+  emailInput.ariaInvalid = false;
+}
+
+//checks email contains characters before and after the @ symbol
+if (!isValidEmail.test(cleanedEmail)) {
+  console.log("valid email required");
+  emailErrorMessage.hidden = false;
+  emailInput.ariaInvalid = true;
+  return;
+}
+
+//Shows the success message
+successEmail.textContent = cleanedEmail;
+signupSection.hidden = true;
+successSection.hidden = false;
 ```
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+Moises Navas
+
+- Frontend Mentor - [@mnav08](https://www.frontendmentor.io/profile/mnav08)
